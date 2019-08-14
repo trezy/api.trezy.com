@@ -8,13 +8,6 @@ import Router from 'koa-router'
 
 
 
-// Local imports
-import firebaseCredentials from '../../firebase-credentials'
-
-
-
-
-
 // Local constants
 const {
   FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
