@@ -28,4 +28,4 @@ const errors = {
 
 
 
-export errors
+export default errors
