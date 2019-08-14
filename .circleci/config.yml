@@ -91,12 +91,12 @@ jobs:
           name: Save Build Cache
           key: build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - client/.next
+            - dist
 
       - persist_to_workspace:
           root: .
           paths:
-            - client/.next
+            - dist
 
   dev-deploy:
     <<: *defaults
