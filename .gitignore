@@ -1,0 +1,8 @@
+.DS_Store
+.env
+firebase-credentials.json
+yarn-error.log
+data/
+dist/
+node_modules/
+logs/

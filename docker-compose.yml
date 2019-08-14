@@ -1,0 +1,15 @@
+app:
+  image: node:12-alpine
+  command: sh -c "yarn install && yarn dev"
+  environment:
+    - PORT
+    - TMDB_API_KEY
+    - TWILIO_AUTH_TOKEN
+    - TWILIO_PHONE_NUMBER
+    - TWILIO_SID
+  ports:
+    - "3001:3001"
+    - "9229:9229"
+  volumes:
+    - .:/app
+  working_dir: /app
