@@ -23,6 +23,10 @@ jobs:
             - repo-master
             - repo-
 
+      - run:
+          name: Install CA Certs
+          command: apk --no-cache add ca-certificates
+
       - checkout
 
       - save_cache:
