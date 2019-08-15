@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "dev": "nodemon --ignore './data' --inspect=0.0.0.0 --exec babel-node src/index.js",
+    "dev": "nodemon --legacy-watch src/index.js",
     "start": "node dist/index.js",
     "test": "mocha --recursive --require @babel/register"
   },
