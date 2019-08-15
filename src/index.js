@@ -27,6 +27,7 @@ import {
   statusCodeGenerator,
 } from './middlewares'
 import {
+  mailRouter,
   pingRouter,
   twilioRouter,
   twitchRouter,
@@ -54,6 +55,7 @@ app.use(statusCodeGenerator())
 app.use(bodyBuilder())
 app.use(prepareNLP())
 
+router.use(mailRouter.routes())
 router.use(pingRouter.routes())
 router.use(twilioRouter.routes())
 router.use(twitchRouter.routes())
