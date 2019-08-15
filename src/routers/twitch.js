@@ -23,16 +23,16 @@ const {
 } = process.env
 const firebaseApp = admin.initializeApp({
   credential: admin.credential.cert({
-      type: FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
-      project_id: FIREBASE_AUTH_URI,
-      private_key_id: FIREBASE_CLIENT_EMAIL,
-      private_key: FIREBASE_CLIENT_ID,
-      client_email: FIREBASE_CLIENT_X509_CERT_URL,
-      client_id: FIREBASE_PROJECT_ID,
-      auth_uri: FIREBASE_PRIVATE_KEY_ID,
-      token_uri: FIREBASE_PRIVATE_KEY,
-      auth_provider_x509_cert_url: FIREBASE_TOKEN_URI,
-      client_x509_cert_url: FIREBASE_TYPE,
+      auth_provider_x509_cert_url: FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
+      auth_uri: FIREBASE_AUTH_URI,
+      client_email: FIREBASE_CLIENT_EMAIL,
+      client_id: FIREBASE_CLIENT_ID,
+      client_x509_cert_url: FIREBASE_CLIENT_X509_CERT_URL,
+      project_id: FIREBASE_PROJECT_ID,
+      private_key_id: FIREBASE_PRIVATE_KEY_ID,
+      private_key: FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      token_uri: FIREBASE_TOKEN_URI,
+      type: FIREBASE_TYPE,
   }),
   databaseURL: 'https://trezy-core.firebaseio.com'
 })
